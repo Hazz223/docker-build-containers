@@ -31,8 +31,8 @@ fi
 
 cd project-folder
 
-if [ ! -e "gradlew" ]; then
-    echo "Pulled repo did not have internal gradle wrapper. Please specify repo with one, or use different building container"
+if [ ! -x "gradlew" ]; then
+    echo "Pulled repo did not have an executable internal gradle wrapper. Check permissions, specify a repo with one, or use different building container"
     exit
 fi
 
